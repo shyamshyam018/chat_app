@@ -37,7 +37,7 @@ h1{
     margin-bottom: 23px;
 }
 
-.message{
+/* .message{
     background-color: bisque;
     width: 24%;
     padding: 10px;
@@ -45,7 +45,7 @@ h1{
     border: 2px solid black;
     border-radius: 12px;
     
-}
+} */
 
 
 .left{
@@ -86,3 +86,77 @@ h1{
     cursor: pointer;
 }
 
+.message {
+    background-color: bisque;
+    width: 200px; /* Adjust the width as needed */
+    padding: 10px;
+    margin: 17px 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Define your regular CSS styles here */
+
+/* Media query for screens with a maximum width of 400px and a maximum height of 500px */
+@media screen and (max-width: 400px) and (max-height: 600px) {
+    /* Adjust your styles for smaller screens here */
+
+    body {
+        background-image: linear-gradient(violet, blue);
+        height:100%;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        max-width: 90%; /* Adjust the container width as needed */
+        height: 60vh; 
+        padding: 10px;
+    }
+
+    .message {
+        width: 150px; /* Adjust the message box width as needed */
+        margin: 10px 5px;
+        height: auto; /* Adjust the margins as needed */
+    }
+
+    .message.left {
+        float: left; /* Remove float for left-aligned messages */
+    }
+
+    .message.right {
+        float: right; /* Remove float for right-aligned messages */
+    }
+
+    .text {
+        width: 100%; /* Adjust the text width as needed */
+    }
+
+    #send-container {
+        width: 100%; /* Adjust the container width as needed */
+    }
+
+    #messageInp {
+        width: 80%; /* Adjust the input width as needed */
+    }
+
+    .btn {
+        width: 15%; /* Adjust the button width as needed */
+        height: 40px; /* Adjust the button height as needed */
+    }
+}
